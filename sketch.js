@@ -24,16 +24,37 @@ function oink() {
     src: ['piggo.m4a'], // Howler supports multiple formats for compatibility: true
   });
   alert("piggo")
+ 
+ setTimeout(createCanvasAfterDelay, 2000);
 }
+
+// New function to house the createCanvas code
+function createCanvasAfterDelay() {
+  createCanvas(400, 400);
+}
+
+ 
+  
+
+}
+  
 
 function mousePressed(){
   oink();
- 
+   
   sound.play();
+ 
+ 
+}
+
+// New function to house the createCanvas code
+function createCanvasAfterDelay() {
+  createCanvas(400, 400);
 }
 
 
-}
+
+
 
 // 3. Check if the animal is "quack" (this is a separate check)
 if (Number(animal) === 2 || animal.toLowerCase() === "quack") {
@@ -68,9 +89,16 @@ function mousePressed(){
   quack();
  
   sound.play();
+  setTimeout(createCanvasAfterDelay, 1000);
+}
+
+// New function to house the createCanvas code
+function createCanvasAfterDelay() {
+  createCanvas(400, 400);
+}
 }
 //quack
-}
+
 
 if (Number(animal) === 3 || animal.toLowerCase() === "human") {
   alert("hello i am winstin");
@@ -114,7 +142,14 @@ function mousePressed(){
   human();
  
   sound.play();
+  setTimeout(createCanvasAfterDelay, 13000);
 }
+
+// New function to house the createCanvas code
+function createCanvasAfterDelay() {
+  createCanvas(400, 400);
+}
+
 
 
 }
