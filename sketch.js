@@ -1,57 +1,42 @@
-volume = 1.5;
-let animal = prompt("what is your favorite animal? the options are piggo, quack and human if you tap on the animal it will make sound and if you type 1 it will do the same thing as piggo and if fyou type 2 it will do the same thing as quack and if you type 3 it will do the same thing as human"); 
+let volume = 1.5;
+let animal = prompt("what is your favorite animal? ");
+let showAnimal = false; // 1. Global variable to control visibility
 
 // 2. Check if the animal is "piggo"
-if (Number(animal) === 1 || animal.toLowerCase() === "piggo") {
+if (animal !== null && (Number(animal) === 1 || animal.toLowerCase() === "piggo")) {
   alert("oink");
-  // P5.js functions should be outside of the prompt logic
-  function setup() {
-    createCanvas(400, 400);
+  showAnimal = true; // 3. Set to true for valid input
+} else {
+  alert("sorry we dont have that animal");
+  showAnimal = false; // 4. Set to false for invalid input
+}
+
+
+function setup() {
+  createCanvas(1000, 1000);
+}
+
+function draw() { // Drawing logic moved to draw loop
+  if (showAnimal) { // 5. Only draw if showAnimal is true
     background("blue");
     fill("pink");
     ellipse(202, 208, 300, 300);
-    // eyesp
-    // mouth
-    ellipse(200, 240, 120, 136);
-    //Ears
-    triangle(50, 150, 100, 50, 150, 100);
-    triangle(250, 100, 300, 50, 350, 150);
+    // Add code for eyes and mouth here
+    // ...
+  } else {
+    clear(); // 6. Clear the canvas if no animal is shown
   }
-  
+}
+
+
 function oink() {
   // Initialize the Howl object with your sound file(s)
-  sound = new Howl({
-    src: ['piggo.m4a'], // Howler supports multiple formats for compatibility: true
-  });
-  alert("piggo")
- 
- setTimeout(createCanvasAfterDelay, 2000);
+  /* ... (rest of your oink function code) ... */
 }
+
 
 // New function to house the createCanvas code
-function createCanvasAfterDelay() {
-  createCanvas(400, 400);
-}
-
- 
-  
-
-}
-  
-
-function mousePressed(){
-  oink();
-   
-  sound.play();
- 
- 
-}
-
-// New function to house the createCanvas code
-function createCanvasAfterDelay() {
-  createCanvas(400, 400);
-}
-
+function createCanvasAfterDelay() {}
 
 
 
@@ -147,7 +132,7 @@ function mousePressed(){
 
 // New function to house the createCanvas code
 function createCanvasAfterDelay() {
-  createCanvas(400, 400);
+  createCanvas(1000, 1000);
 }
 
 
@@ -195,11 +180,17 @@ fill(0); // Black color
 ellipse(180, 140, 5, 5);
 }
 }
-
 function quack() {
 // Initialize the Howl object with your sound file(s)
 sound = new Howl({
 src: ['quack.m4a'], // Howler supports multiple formats for compatibility: true
 });
 alert("quack")
-}
+
+
+  
+
+
+       }
+ 
+  
