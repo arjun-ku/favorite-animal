@@ -18,8 +18,9 @@ function draw() { // Drawing logic moved to draw loop
     background("blue");
     fill("pink");
     ellipse(202, 208, 300, 300);
-    // Add code for eyes and mouth here
-    // ...
+    fill("black")
+    ellipse(260, 100, 50, 50)
+   ellipse(150, 100, 50, 50)
   } 
 }
 
