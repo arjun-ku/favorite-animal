@@ -133,7 +133,7 @@ function createCanvasAfterDelay() {
 
 
 }
-else {alert ("sorry we dont have that")}
+
 // mouth
 ellipse(200, 240, 120, 136);
 //Ears
